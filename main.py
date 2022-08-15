@@ -4,11 +4,18 @@ import random
 client = Client("<YOUR TOKEN">)
 client.start_gateway() # connect to discord server to reveive events (without this events won't work)
 
+profile = client.action.get_profile()
+
 def on_message(event):
 	username = event["author"]["username"]
+	disc = event["author"]["discriminator"]
 	channel_id = event["channel_id"]
 	message = event["content"]
 
+	# filter your messages
+	if username == profile["username"] and disc == "your disc":
+		return
+	
 	print(f"{username} said {message}")
 	
 	# send typing action
