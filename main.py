@@ -12,8 +12,8 @@ def on_message(event):
 	channel_id = event["channel_id"]
 	message = event["content"]
 
-	# filter your messages
-	if username == profile["username"] and disc == "your disc":
+	# filter self messages
+	if username == profile["username"] and disc == profile["discriminator"]:
 		return
 	
 	print(f"{username} said {message}")
