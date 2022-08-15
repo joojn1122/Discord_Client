@@ -5,4 +5,5 @@
 **!USE THIS ON YOUR OWN RISK! Because using this tool you are breaking discord's TOS!**
 
 > To install required packages run
+
 `pip install -r requirements.txt`
