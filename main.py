@@ -19,10 +19,10 @@ def on_message(event):
 	print(f"{username} said {message}")
 	
 	# send typing action
-	client.send_typing_action(channel_id)
+	client.action.send_typing_action(channel_id)
 	
 	# send welcome message and there's 50% change to reply to the user's message or send it normally
-	client.send_chat_message(channel_id, f"Hello {username}!", reply_msg_id=(event["id"] if random.randint(0, 1) == 0 else None))
+	client.action.send_chat_message(channel_id, f"Hello {username}!", reply_msg_id=(event["id"] if random.randint(0, 1) == 0 else None))
 
 
 client.hook_event("MESSAGE_CREATE", on_message)
