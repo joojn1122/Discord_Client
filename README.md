@@ -1,9 +1,12 @@
-## Discord client
+# Discord Client
+## **USE THIS ON YOUR OWN RISK! Self botting is against discord's TOS!**
 
-> Using this you can register events and do some stuff.
+This is something similar like discord.py but for client.
+You can register events and do some stuff.
 
-**!USE THIS ON YOUR OWN RISK! Because using this tool you are breaking discord's TOS!**
-
-> To install required packages run
+### Setup
+Install packages
 
 `pip install -r requirements.txt`
+
+Then you can look into `example.py`.
